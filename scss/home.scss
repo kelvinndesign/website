@@ -76,28 +76,27 @@ a {
     &>div {
         margin: 100px 0;
 
+        img {
+            width: 500px;
+            height: 375px;
+            margin-bottom: 20px;
+        }
+
         &>div {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
 
             &>div {
-                img {
-                    width: 500px;
-                    height: 375px;
-                    margin-bottom: 20px;
-                }
+                margin: 20px 0;
 
                 &:nth-child(odd) {
-                    img {
-                        margin-right: 10px;
-                    }
+                    margin-right: 10px;
                 }
 
                 &:nth-child(even) {
-                    img {
-                        margin-left: 10px;
-                    }
+                    margin-left: 10px;
                 }
             }
         }
