@@ -9,8 +9,12 @@ h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
-    line-height: 92px;
     color: $dark;
+
+    @media only screen and (max-width: $bp-tablet) {
+        font-size: 36px;
+    }
+
 }
 
 h2 {
@@ -20,6 +24,10 @@ h2 {
     font-size: 64px;
     line-height: 75px;
     color: $dark;
+
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 36px;
+    }
 }
 
 h3 {
@@ -27,7 +35,12 @@ h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
+    line-height: 1.5em;
     color: $dark;
+
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 16px;
+    }
 }
 
 h4 {
@@ -35,8 +48,12 @@ h4 {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 50px;
+    line-height: 1.5em;
     color: $accent1;
+
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 16px;
+    }
 }
 
 h5 {
@@ -44,8 +61,12 @@ h5 {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 50px;
+    line-height: 1.5em;
     color: $accent2;
+
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 16px;
+    }
 }
 
 p1 {
