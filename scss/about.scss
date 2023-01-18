@@ -70,53 +70,18 @@ a {
 }
 
 #hero {
-    margin: 0 200px;
+    margin: 0 10vw;
     height: 600px;
 
-    // @media only screen and (max-width: $bp-tablet) {
-    //     margin: 0 100px;
-    //     height: 700px;
-    // }
-
-    // @media only screen and (max-width: $bp-phone) {
-    //     margin: 0 50px;
-    //     height: 700px;
-    // }
-
     div {
+        margin: 100px 0;
         display: flex;
-        flex-direction: row;
-        justify-content: end;
+        flex-direction: column;
         align-items: flex-end;
+        justify-content: center;
 
-        // @media only screen and (max-width: $bp-phone) {
-        //     justify-content: baseline;
-        //     align-items: baseline;
-        // }
-
-        div {
-            margin: 200px 0;
-            display: flex;
-            flex-direction: column;
-
-            // @media only screen and (max-width: $bp-phone) {
-            //     margin-top: 100px;
-            // }
-
-            p1 {
-                width: 700px;
-                text-align: justify;
-
-                // @media only screen and (max-width: $bp-tablet) {
-                //     width: 500px;
-                // }
-
-                // @media only screen and (max-width: $bp-phone) {
-                //     width: 300px;
-                //     margin-top: 20px;
-                //     text-align: left;
-                // }
-            }
+        p1 {
+            width: 500px;
         }
     }
 }
@@ -141,7 +106,7 @@ a {
     }
 
     &>div {
-        margin: 100px 0;
+        margin-top: 100px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -201,52 +166,51 @@ footer {
 
 
     #footer-left {
-        margin-left: 150px;
+        margin-left: 10vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
-        // @media only screen and (max-width: $bp-tablet) {
-        //     margin-left: 50px;
-        // }
 
         img {
             width: 80px;
         }
 
         a {
-            margin-left: 150px;
+            margin-left: 50px;
             color: $light;
             font-family: 'Raleway';
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
-
-            // @media only screen and (max-width: $bp-tablet) {
-            //     margin-left: 50px;
-            // }
-
-            // @media only screen and (max-width: $bp-phone) {
-            //     display: none;
-            // }
         }
     }
 
     #footer-right {
-        margin-right: 150px;
+        margin-right: 10vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
 
-        // @media only screen and (max-width: $bp-tablet) {
-        //     margin-right: 50px;
-        // }
-
         img {
             width: 40px;
             margin: 10px;
+        }
+    }
+}
+
+//More breakpoint
+@media only screen and (max-width: 1268px) {
+    #secondary {
+        &>div {
+            margin-top: 50px;
+            flex-direction: column;
+            align-items: center;
+
+            &>div {
+                margin: 50px 0;
+            }
         }
     }
 }
@@ -264,42 +228,21 @@ footer {
     }
 
     #hero {
-        margin: 0 100px;
-        height: 700px;
-
         div {
-            div {
-                p1 {
-                    width: 500px;
-                }
-            }
-        }
-    }
-
-    #secondary {
-        &>div {
+            margin: 200px 0;
+            display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
 
-            &>div {
-                margin-bottom: 50px;
+            p1 {
+                width: auto;
             }
         }
     }
 
     #footer-left {
-        margin-left: 50px;
-
         a {
-            margin-left: 50px;
-        }
-    }
-
-    #footer-right {
-        margin-right: 50px;
-
-        a {
-            margin-right: 50px;
+            display: none;
         }
     }
 }
@@ -307,35 +250,7 @@ footer {
 //phone breakpoint
 @media only screen and (max-width: $bp-phone) {
     #hero {
-        margin: 0 50px;
-        height: 700px;
-
-        div {
-            justify-content: center;
-            align-items: baseline;
-
-            div {
-                margin-top: 100px;
-
-                p1 {
-                    width: 350px;
-                    margin-top: 20px;
-                    text-align: left;
-                }
-            }
-        }
-    }
-
-    #secondary {
-        margin-bottom: 50px;
-
-        &>div {
-            margin: 50px 0;
-
-            &>div {
-                margin-bottom: 100px;
-            }
-        }
+        height: 800px;
     }
 
     #footer-left {
