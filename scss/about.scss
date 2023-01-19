@@ -16,17 +16,9 @@ a {
     justify-content: space-between;
     align-items: center;
 
-    // @media only screen and (max-width: $bp-tablet) {
-    //     margin: 0 50px;
-    // }
-
     a {
         img {
             width: 170px;
-
-            // @media only screen and (max-width: $bp-tablet) {
-            //     width: 80px;
-            // }
         }
     }
 
@@ -89,10 +81,6 @@ a {
 #secondary {
     margin: 50px 0 100px;
 
-    // @media only screen and (max-width: $bp-phone) {
-    //     margin-bottom: 50px;
-    // }
-
     h2 {
         text-align: center;
     }
@@ -112,28 +100,11 @@ a {
         justify-content: center;
         align-items: baseline;
 
-        // @media only screen and (max-width: $bp-tablet) {
-        //     flex-direction: column;
-        //     align-items: center;
-        // }
-
-        // @media only screen and (max-width: $bp-phone) {
-        //     margin: 50px 0;
-        // }
-
         &>div {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0 80px;
-
-            // @media only screen and (max-width: $bp-tablet) {
-            //     margin-bottom: 50px;
-            // }
-
-            // @media only screen and (max-width: $bp-phone) {
-            //     margin-bottom: 100px;
-            // }
 
             &>div {
                 display: flex;
@@ -249,6 +220,46 @@ footer {
 
 //phone breakpoint
 @media only screen and (max-width: $bp-phone) {
+    #navbar {
+        .primary-nav {
+            position: fixed;
+            inset: 0 0 0 10%;
+            background-color: $dark;
+            flex-direction: column;
+            padding: 30% 10%;
+            justify-content: flex-start;
+
+            transform: translateX(100%);
+            transition: transform 350ms ease-out;
+
+            &[data-visible="true"] {
+                transform: translateX(0%);
+            }
+
+            a {
+                color: $light;
+                text-decoration-color: $accent2;
+            }
+        }
+
+        #hamburger {
+            display: block;
+            position: absolute;
+            z-index: 9999;
+            background-image: url(../img/material-symbols_menu.svg);
+            background-color: transparent;
+            width: 50px;
+            aspect-ratio: 1;
+            border: none;
+            top: 20px;
+            right: 50px;
+
+            &[aria-expanded="true"] {
+                background-image: url(../img/material-symbols_cross.svg);
+            }
+        }
+    }
+
     #hero {
         height: 800px;
     }

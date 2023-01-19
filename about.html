@@ -10,15 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
+    <script defer src="script.js"></script>
 </head>
 
 <body>
     <div id="navbar">
         <a href="index.html"><img src="img/My Logo.svg" alt="Kelvin Nguyen Logo"></a>
+        <button id="hamburger" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false"></button>
         <nav>
-            <ul>
-                <li><a href="About.html">About</a></li>
-                <li><a href="resume.pdf">Résumé</a></li>
+            <ul id="primary-nav" class="primary-nav" data-visible="false">
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Résumé</a></li>
             </ul>
         </nav>
     </div>

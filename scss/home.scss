@@ -3,6 +3,7 @@
 
 body {
     background-color: $light;
+    overflow-x: hidden;
 }
 
 a {
@@ -52,6 +53,10 @@ a {
                 }
             }
         }
+    }
+
+    button {
+        display: none;
     }
 }
 
@@ -195,6 +200,46 @@ footer {
 
 //phone breakpoint
 @media only screen and (max-width: $bp-phone) {
+    #navbar {
+        .primary-nav {
+            position: fixed;
+            inset: 0 0 0 10%;
+            background-color: $dark;
+            flex-direction: column;
+            padding: 30% 10%;
+            justify-content: flex-start;
+
+            transform: translateX(100%);
+            transition: transform 350ms ease-out;
+
+            &[data-visible="true"] {
+                transform: translateX(0%);
+            }
+
+            a {
+                color: $light;
+                text-decoration-color: $accent2;
+            }
+        }
+
+        #hamburger {
+            display: block;
+            position: absolute;
+            z-index: 9999;
+            background-image: url(../img/material-symbols_menu.svg);
+            background-color: transparent;
+            width: 50px;
+            aspect-ratio: 1;
+            border: none;
+            top: 20px;
+            right: 50px;
+
+            &[aria-expanded="true"] {
+                background-image: url(../img/material-symbols_cross.svg);
+            }
+        }
+    }
+
     #hero {
         margin: 0 50px;
         height: 500px;
