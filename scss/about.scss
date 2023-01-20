@@ -59,6 +59,10 @@ a {
             }
         }
     }
+
+    button {
+        display: none;
+    }
 }
 
 #hero {
@@ -262,12 +266,6 @@ footer {
 
     #hero {
         height: 800px;
-    }
-
-    #footer-left {
-        a {
-            display: none;
-        }
     }
 
     #footer-right {

@@ -87,20 +87,20 @@ a {
 
         &>div {
             display: grid;
-            grid-template-columns: repeat(2, 40vw);
-            grid-auto-rows: minmax(40vw, auto);
+            grid-template-columns: repeat(2, 30vw);
+            grid-auto-rows: minmax(30vw, auto);
             grid-gap: 20px;
             justify-content: center;
 
             img {
-                width: 40vw;
+                width: 30vw;
                 height: auto;
                 margin-bottom: 20px;
             }
 
             &>div {
                 margin: 20px 0;
-                width: 40vw;
+                width: 30vw;
             }
         }
     }
@@ -249,12 +249,6 @@ footer {
                 width: 300px;
                 margin-top: 20px;
             }
-        }
-    }
-
-    #footer-left {
-        a {
-            display: none;
         }
     }
 
