@@ -3,36 +3,10 @@
 
 body {
     background-color: $light;
-    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-}
-
-#preload {
-    background-color: $dark;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transition: all 500ms ease;
-
-    img {
-        width: 170px;
-        transition: all 2s ease;
-    }
-}
-
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.show {
-    opacity: 1;
 }
 
 #navbar {
@@ -86,50 +60,103 @@ a {
 }
 
 #hero {
-    margin: 0 200px;
-    height: 600px;
-
-    div {
-        margin: 200px 0;
-        display: flex;
-        flex-direction: column;
-
-        p1 {
-            width: 500px;
-        }
+    img {
+        width: 100%;
     }
 }
 
 #secondary {
-    margin: 50px 50px 100px;
+    #div1 {
+        margin: 40px 25%;
 
-    h2 {
-        text-align: center;
+        h2 {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
     }
 
-    &>div {
-        margin: 100px;
+    #div2 {
+        margin: 100px 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
 
-        &>div {
-            display: grid;
-            grid-template-columns: repeat(2, 30vw);
-            grid-auto-rows: minmax(30vw, auto);
-            grid-gap: 40px;
-            justify-content: center;
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+    }
+
+    #div3 {
+        background-color: $accent1a;
+        padding: 25px 25%;
+
+        div {
+            margin: 50px 0;
+        }
+    }
+
+    #div4 {
+        margin: 100px 25%;
+    }
+
+    #div5 {
+        h5 {
+            margin: 0 25%;
+        }
+
+        div {
+            text-align: center;
 
             img {
-                width: 30vw;
-                height: auto;
-                margin-bottom: 20px;
-            }
-
-            &>div {
-                margin: 20px 0;
-                width: 30vw;
+                width: 600px;
+                margin-bottom: 50px;
             }
         }
     }
+
+    #div6 {
+        margin: 100px 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: baseline;
+            margin-bottom: 50px;
+
+            ul {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    #div7,
+    #div8,
+    #div9 {
+        margin: 50px 25%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    #div10 {
+        background-color: $accent1a;
+        padding: 50px 0;
+
+        div {
+            margin: 0 25%;
+        }
+    }
 }
+
 
 footer {
     background-color: $dark;
@@ -188,30 +215,42 @@ footer {
         }
     }
 
-    #hero {
-        margin: 0 100px;
-        height: 400px;
+    #secondary {
+        #div2 {
+            flex-direction: column;
+        }
 
-        div {
-            p1 {
-                width: auto;
+        #div5 {
+            div {
+                img {
+                    width: 100%;
+                }
             }
         }
-    }
 
-    #secondary {
-        &>div {
-            &>div {
-                grid-template-columns: repeat(1, 80vw);
-                grid-auto-rows: minmax(80vw, auto);
+        #div6 {
+            flex-direction: column;
 
-                img {
-                    width: 80vw;
+            div {
+                ul {
+                    li {
+                        margin: 20px 0;
+                    }
                 }
+            }
+        }
 
-                &>div {
-                    width: 80vw;
-                }
+        #div7,
+        #div8,
+        #div9 {
+            margin: 0 0 50px;
+
+            h5 {
+                margin: 0 25% 20px;
+            }
+
+            img {
+                width: 100%;
             }
         }
     }
@@ -262,27 +301,6 @@ footer {
             &[aria-expanded="true"] {
                 background-image: url(../img/material-symbols_cross.svg);
             }
-        }
-    }
-
-    #hero {
-        margin: 0 50px;
-        height: 500px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        div {
-            p1 {
-                width: 300px;
-                margin-top: 20px;
-            }
-        }
-    }
-
-    #secondary {
-        &>div {
-            margin-top: 20px;
         }
     }
 
