@@ -4,11 +4,13 @@ $dark: #252422;
 $accent1: #29339B;
 $accent1a: #29339b10;
 $accent2: #E84855;
+$gradient: linear-gradient(to right, #fc5c7d, #6a82fb);
 
 // Fonts
 $font-main: 'Raleway';
 $font-display: 'Sorts Mill Goudy';
 
 //Breakpoints
+$bp-smallScreen: 994px;
 $bp-tablet: 800px;
 $bp-phone: 500px;
