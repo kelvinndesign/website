@@ -36,7 +36,7 @@ a {
 }
 
 #navbar {
-    margin: 0 150px;
+    margin: 0 10vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -85,31 +85,46 @@ a {
     }
 }
 
+// #hero {
+//     padding: 200px;
+//     height: 80vh;
+//     background-image:
+//         url('../img/model.png'),
+//         $gradient;
+//     background-position: 90% 100%, 0%;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     // background: linear-gradient(to right, #1e130c, #9a8478);
+
+
+//     div {
+//         display: flex;
+//         flex-direction: column;
+//         max-width: 40%;
+
+//         h1 {
+//             color: $light;
+//         }
+
+//         p1 {
+//             color: $light;
+//             height: auto;
+//         }
+//     }
+// }
+
 #hero {
-    padding: 200px;
-    height: 80vh;
-    background-image:
-        url('../img/model.png'),
-        $gradient;
-    background-position: 90% 100%, 0%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    // background: linear-gradient(to right, #1e130c, #9a8478);
+    #heroDesktop {
+        display: block;
+        width: 100%;
+    }
 
+    #heroTablet {
+        display: none;
+    }
 
-    div {
-        display: flex;
-        flex-direction: column;
-        max-width: 40%;
-
-        h1 {
-            color: $light;
-        }
-
-        p1 {
-            color: $light;
-            height: auto;
-        }
+    #heroPhone {
+        display: none;
     }
 }
 
@@ -121,7 +136,7 @@ a {
     }
 
     &>div {
-        margin: 100px;
+        margin: 50px 100px 100px;
 
         &>div {
             display: grid;
@@ -189,24 +204,6 @@ footer {
     }
 }
 
-//small screen breakpoint
-@media only screen and (max-width: $bp-smallScreen) {
-    #hero {
-        padding: 100px 200px;
-        height: 50vh;
-
-        div {
-            h1 {
-                font-size: 30px;
-            }
-
-            p1 {
-                font-size: 16px;
-            }
-        }
-    }
-}
-
 //tablet breakpoint
 @media only screen and (max-width: $bp-tablet) {
     #navbar {
@@ -219,25 +216,42 @@ footer {
         }
     }
 
-    #hero {
-        padding: 50px;
-        height: 80vh;
-        background-image:
-            url('../img/modelSquare.png'),
-            $gradient;
-        background-position: 50% 100%, 0%;
-        background-size: 80%, 100%;
-        background-repeat: no-repeat;
+    // #hero {
+    //     padding: 50px;
+    //     height: 80vh;
+    //     background-image:
+    //         url('../img/modelSquare.png'),
+    //         $gradient;
+    //     background-position: 50% 100%, 0%;
+    //     background-size: 80%, 100%;
+    //     background-repeat: no-repeat;
 
-        div {
-            margin-top: 5vh;
-            max-width: 90%;
-            text-align: center;
+    //     div {
+    //         margin-top: 5vh;
+    //         max-width: 90%;
+    //         text-align: center;
+    //     }
+    // }
+
+    #hero {
+        #heroDesktop {
+            display: none;
+        }
+
+        #heroTablet {
+            display: block;
+            width: 100%;
+        }
+
+        #heroPhone {
+            display: none;
         }
     }
 
     #secondary {
         &>div {
+            margin-top: 50px;
+
             &>div {
                 grid-template-columns: repeat(1, 80vw);
                 grid-auto-rows: minmax(80vw, auto);
@@ -302,11 +316,28 @@ footer {
         }
     }
 
+    // #hero {
+    //     height: 70vh;
+    // }
+
     #hero {
-        height: 70vh;
+        #heroDesktop {
+            display: none;
+        }
+
+        #heroTablet {
+            display: none;
+        }
+
+        #heroPhone {
+            display: block;
+            width: 100%;
+        }
     }
 
     #secondary {
+        margin-top: 30px;
+
         &>div {
             margin-top: 20px;
         }
