@@ -10,7 +10,7 @@ a {
 }
 
 #navbar {
-    margin: 0 150px;
+    margin: 0 10vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,16 +68,25 @@ a {
 #hero {
     margin: 0 10vw;
     height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 30%;
+    }
 
     div {
         margin: 100px 0;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: center;
 
         p1 {
-            width: 500px;
+            width: 30vw;
+            text-align: left;
         }
     }
 }
@@ -177,6 +186,20 @@ footer {
 
 //More breakpoint
 @media only screen and (max-width: 1268px) {
+    #hero {
+        img {
+            width: 100%;
+        }
+
+        div {
+            margin-left: 100px;
+
+            p1 {
+                width: 50vw;
+            }
+        }
+    }
+
     #secondary {
         &>div {
             margin-top: 50px;
@@ -203,8 +226,18 @@ footer {
     }
 
     #hero {
+        margin: 0 10vw 100px;
+        padding: 500px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 70%;
+        }
+
         div {
-            margin: 200px 0;
+            margin: 100px 0 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -265,7 +298,9 @@ footer {
     }
 
     #hero {
-        height: 800px;
+        div {
+            text-align: center;
+        }
     }
 
     #footer-right {
