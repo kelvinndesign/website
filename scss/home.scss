@@ -129,32 +129,65 @@ a {
 }
 
 #secondary {
-    margin: 70px 50px 100px;
+    background: $dark;
+    padding: 150px 0 0;
+    overflow: hidden;
 
     h2 {
         text-align: center;
+        color: $light;
     }
 
     &>div {
-        margin: 50px 100px 100px;
+        margin: 100px 0 0;
 
         &>div {
             display: grid;
-            grid-template-columns: repeat(2, 30vw);
-            grid-auto-rows: minmax(30vw, auto);
-            grid-gap: 40px;
+            grid-template-columns: repeat(2, 48vw);
+            grid-auto-rows: minmax(30vh, auto);
+            grid-gap: 0 20px;
             justify-content: center;
 
             img {
-                width: 30vw;
+                width: 48vw;
                 height: auto;
-                margin-bottom: 20px;
+                transition: 0.3s ease-in;
             }
 
             &>div {
-                margin: 20px 0;
-                width: 30vw;
+
+                a {
+                    &>div {
+                        position: relative;
+                        bottom: calc(100% - 60px);
+                        width: 48vw;
+                        height: calc(100% - 60px);
+                        overflow: hidden;
+                        transition: 0.3s ease-in;
+                        opacity: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #29339b91;
+
+                        &>div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            h3,
+                            h4 {
+                                color: $light;
+                            }
+                        }
+                    }
+                }
             }
+
+            // &>div {
+            //     margin: 20px 0;
+            //     width: 48vw;
+            // }
         }
     }
 }
@@ -179,15 +212,6 @@ footer {
         img {
             width: 80px;
         }
-
-        a {
-            margin-left: 50px;
-            color: $light;
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-        }
     }
 
     #footer-right {
@@ -200,6 +224,69 @@ footer {
         img {
             width: 40px;
             margin: 10px;
+        }
+    }
+}
+
+//Thumbnail hover
+#secondary {
+    &>div {
+        &>div {
+            &>div:hover img {
+                opacity: .1;
+            }
+
+            &>div:hover div {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:$bp-smallScreen) {
+    #hero {
+        #heroDesktop {
+            display: none;
+        }
+
+        #heroTablet {
+            display: block;
+            width: 100%;
+        }
+
+        #heroPhone {
+            display: none;
+        }
+    }
+
+    #secondary {
+        &>div {
+            margin-top: 50px;
+
+            &>div {
+                grid-template-columns: repeat(1, 80vw);
+                grid-auto-rows: minmax(80vw, auto);
+
+                img {
+                    width: 80vw;
+                }
+
+                &>div {
+                    width: 80vw;
+
+                    a {
+                        &>div {
+                            bottom: 0;
+                            height: auto;
+                            opacity: 1;
+                            background-color: $dark;
+                            width: 80vw;
+                            margin: 20px 0 40px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -232,40 +319,6 @@ footer {
     //         text-align: center;
     //     }
     // }
-
-    #hero {
-        #heroDesktop {
-            display: none;
-        }
-
-        #heroTablet {
-            display: block;
-            width: 100%;
-        }
-
-        #heroPhone {
-            display: none;
-        }
-    }
-
-    #secondary {
-        &>div {
-            margin-top: 50px;
-
-            &>div {
-                grid-template-columns: repeat(1, 80vw);
-                grid-auto-rows: minmax(80vw, auto);
-
-                img {
-                    width: 80vw;
-                }
-
-                &>div {
-                    width: 80vw;
-                }
-            }
-        }
-    }
 
     #footer-left {
         a {
@@ -336,10 +389,24 @@ footer {
     }
 
     #secondary {
-        margin-top: 30px;
-
         &>div {
-            margin-top: 20px;
+            &>div {
+                &>div {
+                    a {
+                        &>div {
+                            &>div {
+                                h3 {
+                                    font-size: 24px;
+                                }
+
+                                h4 {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
