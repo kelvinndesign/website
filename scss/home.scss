@@ -85,34 +85,6 @@ a {
     }
 }
 
-// #hero {
-//     padding: 200px;
-//     height: 80vh;
-//     background-image:
-//         url('../img/model.png'),
-//         $gradient;
-//     background-position: 90% 100%, 0%;
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     // background: linear-gradient(to right, #1e130c, #9a8478);
-
-
-//     div {
-//         display: flex;
-//         flex-direction: column;
-//         max-width: 40%;
-
-//         h1 {
-//             color: $light;
-//         }
-
-//         p1 {
-//             color: $light;
-//             height: auto;
-//         }
-//     }
-// }
-
 #hero {
     #heroDesktop {
         display: block;
@@ -129,71 +101,61 @@ a {
 }
 
 #secondary {
-    background: $dark;
-    padding: 150px 0 0;
+    background: linear-gradient(161.07deg, $dark 7.69%, #444444 46.41%, $dark 69.55%);
+    padding: 150px 0;
     overflow: hidden;
 
     h2 {
         text-align: center;
         color: $light;
+        margin-bottom: 150px;
     }
 
-    &>div {
-        margin: 100px 0 0;
+    #grid-container {
+        display: flex;
+        justify-content: center;
+    }
 
-        &>div {
-            display: grid;
-            grid-template-columns: repeat(2, 48vw);
-            grid-auto-rows: minmax(30vh, auto);
-            grid-gap: 0 20px;
-            justify-content: center;
+    #cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
 
-            img {
-                width: 48vw;
-                height: auto;
-                transition: 0.3s ease-in;
-            }
+    .card {
+        padding: 10px;
+        max-width: 40vw;
+        border-bottom: 2px solid $light;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        transition: 300ms ease-in;
 
-            &>div {
-
-                a {
-                    &>div {
-                        position: relative;
-                        bottom: calc(100% - 60px);
-                        width: 48vw;
-                        height: calc(100% - 60px);
-                        overflow: hidden;
-                        transition: 0.3s ease-in;
-                        opacity: 0;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: #29339b91;
-
-                        &>div {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-
-                            h3,
-                            h4 {
-                                color: $light;
-                            }
-                        }
-                    }
-                }
-            }
-
-            // &>div {
-            //     margin: 20px 0;
-            //     width: 48vw;
-            // }
+        img {
+            display: block;
+            width: 100%;
         }
+    }
+
+    .card-text {
+        padding: 5px 0 0;
+
+        h3,
+        h4 {
+            color: $light;
+        }
+    }
+
+    .card-text-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
     }
 }
 
 footer {
     background-color: $dark;
+    border-top: 2px solid $light;
     color: $light;
     display: flex;
     flex-direction: row;
@@ -228,19 +190,9 @@ footer {
     }
 }
 
-//Thumbnail hover
-#secondary {
-    &>div {
-        &>div {
-            &>div:hover img {
-                opacity: .1;
-            }
-
-            &>div:hover div {
-                opacity: 1;
-            }
-        }
-    }
+//card hover
+.card:hover {
+    background-color: $accent2;
 }
 
 @media only screen and (max-width:$bp-smallScreen) {
@@ -261,33 +213,12 @@ footer {
 
     #secondary {
         &>div {
-            margin-top: 50px;
-
-            &>div {
-                grid-template-columns: repeat(1, 80vw);
-                grid-auto-rows: minmax(80vw, auto);
-
-                img {
-                    width: 80vw;
-                }
-
-                &>div {
-                    width: 80vw;
-
-                    a {
-                        &>div {
-                            bottom: 0;
-                            height: auto;
-                            opacity: 1;
-                            background-color: $dark;
-                            width: 80vw;
-                            margin: 20px 0 40px;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
+            // margin-top: 50px;
         }
+    }
+
+    .card:hover {
+        background: none;
     }
 }
 
@@ -303,22 +234,15 @@ footer {
         }
     }
 
-    // #hero {
-    //     padding: 50px;
-    //     height: 80vh;
-    //     background-image:
-    //         url('../img/modelSquare.png'),
-    //         $gradient;
-    //     background-position: 50% 100%, 0%;
-    //     background-size: 80%, 100%;
-    //     background-repeat: no-repeat;
+    #secondary {
+        #cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
-    //     div {
-    //         margin-top: 5vh;
-    //         max-width: 90%;
-    //         text-align: center;
-    //     }
-    // }
+        .card {
+            max-width: 80vw;
+        }
+    }
 
     #footer-left {
         a {
@@ -369,10 +293,6 @@ footer {
         }
     }
 
-    // #hero {
-    //     height: 70vh;
-    // }
-
     #hero {
         #heroDesktop {
             display: none;
@@ -389,24 +309,18 @@ footer {
     }
 
     #secondary {
-        &>div {
-            &>div {
-                &>div {
-                    a {
-                        &>div {
-                            &>div {
-                                h3 {
-                                    font-size: 24px;
-                                }
+        padding: 50px 0;
 
-                                h4 {
-                                    font-weight: 400;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        #cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .card {
+            max-width: 80vw;
         }
     }
 
