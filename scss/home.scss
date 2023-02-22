@@ -211,12 +211,6 @@ footer {
         }
     }
 
-    #secondary {
-        &>div {
-            // margin-top: 50px;
-        }
-    }
-
     .card:hover {
         background: none;
     }
@@ -241,6 +235,15 @@ footer {
 
         .card {
             max-width: 80vw;
+            padding: 0 0 50px;
+            border-bottom: none;
+        }
+
+        .card-text-flex {
+
+            h3 {
+                font-size: 24px;
+            }
         }
     }
 
