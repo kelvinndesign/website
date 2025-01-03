@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Hero = () => {
   return (
     <div className='grid'>
-        <img src='./HeroName.svg' className='justify-self-stretch align-middle' alt='KELVIN NGUYEN'/>
+        <img src='./heroName.svg' className='justify-self-stretch align-middle' alt='KELVIN NGUYEN'/>
 
         <div className='justify-self-center lg:justify-self-start pt-10 lg:pt-20'>
           <div className='flex justify-center lg:justify-start'>
