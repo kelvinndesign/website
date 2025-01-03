@@ -10,22 +10,22 @@ export default function TiebreakContent() {
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8 lg:mb-20'>
             <div>
-                <img src='./Tiebreak1.png' className=''/>
+                <img src='../Tiebreak1.png' className=''/>
             </div>
             <div>
-                <img src='./Tiebreak2.png' className=''/>
+                <img src='../Tiebreak2.png' className=''/>
             </div>
             <div>
-                <img src='./Tiebreak3.png' className=''/>
+                <img src='../Tiebreak3.png' className=''/>
             </div>
             <div>
-                <img src='./Tiebreak4.png' className=''/>
+                <img src='../Tiebreak4.png' className=''/>
             </div>
             <div>
-                <img src='./Tiebreak5.png' className=''/>
+                <img src='../Tiebreak5.png' className=''/>
             </div>
             <div>
-                <img src='./Tiebreak6.png' className=''/>
+                <img src='../Tiebreak6.png' className=''/>
             </div>
         </div>
         
