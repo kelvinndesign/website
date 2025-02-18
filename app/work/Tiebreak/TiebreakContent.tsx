@@ -16,7 +16,7 @@ export default function TiebreakContent() {
         </div>
 
         <div className='mt-8'>
-            <video src='../TiebreakIntro.mp4' controls muted></video>
+            <video src='../TiebreakIntro.mp4' controls muted className='w-full'/>
             <p className='italic mt-2'>Animated intro and menu experience was an animation sequence I had created - from mockups in Adobe After Effects to code implementation via XAML.</p>
         </div>
 

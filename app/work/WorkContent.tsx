@@ -18,12 +18,14 @@ export default function WorkContent() {
                 </Link>
             </div>
             <div>
-                <img src='../Rugby25_CoverArt.png' className='w-80'/>
+                <Link href='/work/Rugby25'>
+                    <img src='../Rugby25_CoverArt.png' className='w-80 hover:scale-105 transition ease-out'/>   
+                </Link>
             </div>
         </div>
 
         <div className='bg-blue w-fit h-fit mb-12'>
-            <h2 className='text-white text-sm font-bold italic ml-4 mr-4 leading-tight text-center lg:text-left'>PERSONAL</h2>
+            <h2 className='text-white text-sm font-bold italic ml-4 mr-4 leading-tight text-center lg:text-left'>CONTRACT</h2>
         </div>
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-2'>
